@@ -82,6 +82,7 @@ header{
     border-bottom:solid 5px #eb0012;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 .sprite{
     width:20px;
     height:20px;
@@ -109,15 +110,38 @@ header{
 =======
 
 .add{
+=======
+.sprite{
+>>>>>>> a889639a1f936cefbb1a6778cc4f8ea46e8bfa57
     width:20px;
     height:20px;
     position:absolute;
+    
+}
+.add{
+    color:white;
     left:-20px;
+    top:10px;
+    text-decoration:none;
+}
+.add:hover{
+    color:#eb0012;
 }
 .edit{
+<<<<<<< HEAD
     
     
 >>>>>>> 3cf626e12beadf55ff677bff09309c4dff3a4b6b
+=======
+    float:right;
+    top:10px;
+    background-image:url('images/edit-white.png');
+    background-size:100%;
+    right:10px;
+}
+.edit:hover{
+    background-image:url('images/edit-red.png');
+>>>>>>> a889639a1f936cefbb1a6778cc4f8ea46e8bfa57
 }
 main{
     display:inline-block;
@@ -128,11 +152,16 @@ main{
 }
 article{
 <<<<<<< HEAD
+<<<<<<< HEAD
     margin-bottom:10px;
     position:relative;
 =======
     margin-bottom:5px;
 >>>>>>> 3cf626e12beadf55ff677bff09309c4dff3a4b6b
+=======
+    margin-bottom:10px;
+    position:relative;
+>>>>>>> a889639a1f936cefbb1a6778cc4f8ea46e8bfa57
 }
 aside{
     display:inline-block;
@@ -175,6 +204,7 @@ h1{
     padding:0 15px 10px;
 }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 /*#shadow{
     position:absolute;
@@ -187,19 +217,26 @@ h1{
 }
 */
 >>>>>>> 3cf626e12beadf55ff677bff09309c4dff3a4b6b
+=======
+>>>>>>> a889639a1f936cefbb1a6778cc4f8ea46e8bfa57
 #shadow{
     position:absolute;
     top:0;
     left:0;
 <<<<<<< HEAD
+<<<<<<< HEAD
     background-color:rgba(255,255,255,0.8);
 =======
     background-color:rgba(255,255,255,0.9);
 >>>>>>> 3cf626e12beadf55ff677bff09309c4dff3a4b6b
+=======
+    background-color:rgba(255,255,255,0.8);
+>>>>>>> a889639a1f936cefbb1a6778cc4f8ea46e8bfa57
     width:100%;
     height:100%;
 }
 .login-window{
+<<<<<<< HEAD
 <<<<<<< HEAD
     margin-top:10%;
     vertical-align:middle;
@@ -215,21 +252,27 @@ h1{
     position:absolute;
     top:0;
     left:0;
+=======
+    margin-top:10%;
+>>>>>>> a889639a1f936cefbb1a6778cc4f8ea46e8bfa57
     vertical-align:middle;
     width:500px;
     height:300px;
-    margin-left:0;
-    margin-right:0;
+    margin-left:auto;
+    margin-right:auto;
     opacity:1;
-    z-index:100;
+    z-index:10;
     background-color:rgba(0,0,0,1);
 }
+<<<<<<< HEAD
 .sprite{
     width:20px;
     height:20px;
     
 }
 >>>>>>> 3cf626e12beadf55ff677bff09309c4dff3a4b6b
+=======
+>>>>>>> a889639a1f936cefbb1a6778cc4f8ea46e8bfa57
 
 form{
     width:200px;
@@ -242,9 +285,13 @@ label{
     margin-top:1em;
     margin-bottom:0.5em;
 <<<<<<< HEAD
+<<<<<<< HEAD
     color:#eb0012;
 =======
 >>>>>>> 3cf626e12beadf55ff677bff09309c4dff3a4b6b
+=======
+    color:#eb0012;
+>>>>>>> a889639a1f936cefbb1a6778cc4f8ea46e8bfa57
 }
 label:first-child{
     margin-top:0;
