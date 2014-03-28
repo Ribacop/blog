@@ -1,0 +1,266 @@
+@font-face {
+    font-family: 'american_idiotregular';
+    src: url('../fonts/american_idiot-webfont.eot');
+    src: url('../fonts/american_idiot-webfont.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/american_idiot-webfont.woff') format('woff'),
+         url('../fonts/american_idiot-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+body{
+    background-color:white;
+    color:black;
+}
+a{
+    color:black;
+}
+header{
+    border-bottom: 1px solid black;
+    margin-bottom:10px;
+    min-height:80px;
+}
+#logo{
+    text-decoration:none;
+    display:inline-block;
+    margin-right:30px;
+    color:black;
+}
+#logo>img{
+    height:80px;
+    float:left; 
+    visibility:hidden;
+}
+#logo>span{
+    float:left;    
+    vertical-align:top;
+    font-family:'american_idiotregular',sans-serif;
+    font-size:2.5em;
+    line-height:0.8em;
+    padding:5px 0 0 5px; 
+}
+.login-call{
+   display:inline-block;
+   margin-top:20px;
+   text-align:right;
+   vertical-align:top;
+   width:64px;
+   height:35px;
+   background-color:white;
+   background-image:url('../images/login.png');
+   background-size:100%;
+}
+.wrapper{
+    position:relative;
+    width:925px;
+    margin-left:auto;
+    margin-right:auto;
+}
+.center{
+    text-align:center;
+}
+.header-menu{
+    display:inline-block;
+    padding:0;
+    list-style:none;    
+    vertical-align:top;
+}
+.header-menu>li{
+    display:inline-block;
+   
+}
+.header-menu a{
+    font-size:2em;
+    text-decoration:none;
+    padding-right:15px;
+}
+.header-menu>li>.current{
+    color:black;
+    border-bottom:solid 5px black;
+}
+main{
+    display:inline-block;
+    position:relative;
+    margin-right:10px;
+    width:700px;
+    vertical-align:top;
+}
+article{
+    margin-bottom:10px;
+    position:relative;
+}
+aside{
+    display:inline-block;
+    width:210px;
+    vertical-align:top;
+}
+nav{    
+    margin-bottom:10px;
+    padding:10px;
+}
+h1{
+    color:black;
+    margin:5px 0;
+}
+.article-name{
+    font-size:2em;
+    text-align:left;
+    color:black;
+    font-weight:bold;
+    margin-top:5px;
+    margin-bottom:-5px;
+}
+footer{
+    border-top:1px solid white;
+    height:20px;
+    margin-top:10px;
+    clear:both;   
+    padding-top:3px;
+}
+.view-block{
+    background-color:white;
+    border:1px solid black; 
+    border-radius:10px;
+    padding:0 15px 10px;
+}
+.shadow{
+    position:absolute;
+    top:0;
+    left:0;
+    background-color:rgba(255,255,255,0.8);
+    width:100%;
+    height:200%;
+}
+.login-window{
+    margin-top:10%;
+    vertical-align:middle;
+    width:500px;
+    height:300px;
+    margin-left:auto;
+    margin-right:auto;
+    opacity:1;
+    z-index:10;
+    background-color:rgba(0,0,0,1);
+}
+
+/*Формы ввода*/
+#login{
+    border-radius: 10px;
+    width:200px;
+    margin:50px auto;
+    padding:15px 20px;
+}
+label{
+    display:block;
+    margin-top:1em;
+    margin-bottom:0.5em;
+    color:black;
+}
+label:first-child{
+    margin-top:0;
+}
+input,
+textarea{
+    border:1px solid #ccc;
+    padding:4px 5px;
+    background:white;
+    border-radius: 5px;
+    box-shadow:inset 0 1px 2px rgba(0, 0, 0, 0.2);
+    -moz-box-sizing:border-box;
+    -webkit-box-sizing:border-box;
+    box-sizing:border-box;
+    
+}
+input:focus{
+    border-color: black;    
+}
+#login>input[type="text"],
+#login>input[type="password"]{
+    width:100%;
+}
+#login>a{
+    color:black;
+    float:right;
+    margin-top:1em;
+}
+input[type="submit"]{
+    display:inline-block;
+    margin-top:1em;
+    padding:5px 15px;  
+    font-weight:bold;
+    color:#333;
+    background:white;
+    border:none;
+    border-radius: 12px;
+    background-image: linear-gradient(top, #fff, #ddd);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    text-shadow:0 1px 1px white;
+}
+/*Кнопки добавления/изменения статей*/
+.sprite{
+    width:20px;
+    height:20px;
+    position:absolute;
+    
+}
+.add{
+    color:black;
+    left:-50px;
+    top:10px;
+    text-decoration:none;
+    display:block;
+    font-weight:bold;
+    background-color:white;
+    border:1px solid #404040; 
+    border-radius:10px;
+    text-align:center;
+    position:absolute;
+    height:30px;
+    width:30px;
+    padding-top:3px;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    
+}
+.edit{
+    float:right;
+    top:10px;
+    background-image:url('../images/edit-white.png');
+    background-size:100%;
+    right:10px;
+}
+/*Форма добавления/изменения статьи*/
+.new-post{
+    border:2px solid #eb0012;
+    box-shadow: 0 1px 5px rgba(235, 0, 18, 0.5);
+}
+.new-post-name{
+    margin-top:15px;
+    width:440px;
+    height:30px;
+}
+.new-post-date{
+    margin-top:15px;
+    float:right;
+    border:0;
+    width:216px;
+    height:30px;
+}
+.new-post-content{
+    margin-top:15px;
+    width:665px;
+}
+.time-label{
+    color:white;
+    font-size:0.7em;
+}
+/*Страницы*/
+.page{
+    width:100%;
+}
+/*Регистрация*/
+#register input{
+    width:500px;
+    margin-top:5px;
+    margin-left:200px;
+}
