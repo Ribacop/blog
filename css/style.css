@@ -7,12 +7,19 @@
     font-weight: normal;
     font-style: normal;
 }
+.center{
+    text-align:center;
+}
 body{
     background-color:black;
     color:white;
+    font-family:sans-serif;
 }
 a{
     color:white;
+}
+a:hover{
+    color:#eb0012;
 }
 header{
     border-bottom: 1px solid white;
@@ -22,43 +29,22 @@ header{
 #logo{
     text-decoration:none;
     display:inline-block;
-    margin-right:30px;
     color:white;
-}
-#logo>img{
+    background:url('../images/logo.png') no-repeat;
+    width:170px;
     height:80px;
-    float:left; 
-}
-#logo>span{
-    float:left;    
     vertical-align:top;
     font-family:'american_idiotregular',sans-serif;
     font-size:2.5em;
     line-height:0.8em;
-    padding:5px 0 0 5px; 
+    padding:5px 0 0 60px; 
 }
-.login-call{
-   display:inline-block;
-   margin-top:20px;
-   text-align:right;
-   vertical-align:top;
-   width:64px;
-   height:35px;
-   background-color:white;
-   background-image:url('../images/login.png');
-   background-size:100%;
-}
-.login-call:hover{
-    background-color:#eb0012;
-}
+
 .wrapper{
     position:relative;
     width:790px;
     margin-left:auto;
     margin-right:auto;
-}
-.center{
-    text-align:center;
 }
 .header-menu{
     display:inline-block;
@@ -78,15 +64,26 @@ header{
     border-bottom:solid 5px white;
     color:white;
 }
-.header-menu>li>.current{
+.current{
     color:#eb0012;
     border-bottom:solid 5px #eb0012;
+}
+.login-call{
+   display:inline-block;
+   width:64px;
+   height:35px;
+   background-color:white;
+   background-image:url('../images/login.png');
+   background-size:100%;
+}
+.login-call:hover{
+    background-color:#eb0012;
 }
 main{
     float:left;
     position:relative;
-    margin-right:10px;
-    width:570px;
+    padding-right:10px;
+    width:580px;
     vertical-align:top;
 }
 article{
@@ -95,16 +92,14 @@ article{
 }
 aside{
     float:right;
-    width:210px;
+    width:200px;
     vertical-align:top;
 }
-nav{    
+.right-nav{    
     margin-bottom:10px;
     padding:10px;
 }
-a:hover{
-    color:#eb0012;
-}
+
 h1{
     color:white;
     margin:5px 0;
@@ -209,7 +204,6 @@ input[type="submit"]{
     width:20px;
     height:20px;
     position:absolute;
-    
 }
 .add{
     color:white;

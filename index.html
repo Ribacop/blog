@@ -2,8 +2,9 @@
 <html>
     <head>
         <title>Корпоративный блог</title>
-        <link media="screen" rel="stylesheet" href="css/style.css">
-        <link media="handheld, only screen and (max-device-width:480px)" rel="stylesheet" href="css/handheld.css">
+        <link rel="stylesheet" href="css/style.css">
+        <link media="screen" rel="stylesheet" href="css/screen.css">
+        <link media="handheld, (max-width:789px)" rel="stylesheet" href="css/handheld.css">
         <link media="print" rel="stylesheet" href="css/print.css">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Учебный корпоративный блог">
@@ -13,16 +14,15 @@
         
 	    <header>
 	      <div class="wrapper">
-            <a id="logo" href="/blog">
-                <img src="https://pp.vk.me/c425025/v425025450/889a/0ojLGlKEnhA.jpg" alt=""/>
-                <span>horseshoes &amp;<br/>handgrenades</span>                      
+            <a id="logo" href="index.html">
+                <span>horseshoes &amp;<br/>handgrenades</span>                     
             </a>
             <ul class="header-menu">
                 <li><a class="current" href="#">Новости</a></li>
                 <li><a href="#">О нас</a></li>
                 <li><a href="#">Контакты</a></li>
+                <li> <a class="login-call" href="login.html"></a></li>
             </ul>
-            <a class="login-call" href="login.html"></a>
           </div>
 	    </header>
 	    <div class="wrapper">
@@ -38,7 +38,7 @@ Praesent pharetra quam vitae elit ultricies, vitae congue erat aliquet. Morbi ru
 Nulla facilisi. Integer quis accumsan tortor. Morbi quis mattis lectus, et malesuada dolor. Cras consequat lobortis turpis eu commodo. Nunc tristique elit sed mauris bibendum accumsan. Phasellus accumsan eu felis placerat posuere. Nullam nec euismod metus. Praesent a pharetra arcu. Quisque pulvinar posuere risus, feugiat molestie metus posuere quis. Pellentesque mattis convallis ante a dapibus. Ut dignissim blandit neque, ut tincidunt orci varius sit amet. Suspendisse et enim luctus elit pretium interdum. In porttitor est eu vulputate interdum. Proin vestibulum elit nibh, ac mattis mi cursus eu. Donec facilisis sodales elit vel iaculis.
 
 		    	</p>
-		    	<iframe width="560" height="315" src="//www.youtube.com/embed/fA084ljqybk?list=PLgMaGEI-ZiiZ0ZvUtduoDRVXcU5ELjPcI" frameborder="0" allowfullscreen style="text-align:center; margin-left:50px;"></iframe>
+		    	<iframe width="100%" height="315" src="//www.youtube.com/embed/fA084ljqybk?list=PLgMaGEI-ZiiZ0ZvUtduoDRVXcU5ELjPcI" frameborder="0" allowfullscreen ></iframe>
 		    	<p style="text-align:center;"><audio type="audio/mp3" src="" controls>
 		    	Браузер не поддерживает mp3
 		    	</audio>
@@ -62,12 +62,12 @@ Donec ornare enim eget arcu sodales blandit vitae nec lectus. Sed vulputate ipsu
 	    	</article>
 	    </main>
         <aside>
-        	<nav id="tags" class="view-block">
+        	<nav id="tags" class="view-block right-nav">
 	        	<h1>Календарь</h1>
 	        	<a href="#">Январь</a>
 	    	    <a href="#">Февраль</a>
 	        </nav>
-	        <nav id="recent" class="view-block">
+	        <nav id="recent" class="view-block right-nav">
 		        <h1>Популярные записи</h1>
                 <a href="#">Заголовок статьи 1</a>
                 <br/>
