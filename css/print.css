@@ -7,6 +7,9 @@
     font-weight: normal;
     font-style: normal;
 }
+.center{
+    text-align:center;
+}
 body{
     background-color:white;
     color:black;
@@ -22,21 +25,15 @@ header{
 #logo{
     text-decoration:none;
     display:inline-block;
-    margin-right:30px;
     color:black;
-}
-#logo>img{
+    background:url('../images/logo.png') no-repeat;
+    width:170px;
     height:80px;
-    float:left; 
-    visibility:hidden;
-}
-#logo>span{
-    float:left;    
     vertical-align:top;
     font-family:'american_idiotregular',sans-serif;
     font-size:2.5em;
     line-height:0.8em;
-    padding:5px 0 0 5px; 
+    padding:5px 0 0 60px; 
 }
 .login-call{
    display:inline-block;
@@ -51,7 +48,7 @@ header{
 }
 .wrapper{
     position:relative;
-    width:925px;
+    width:790px;
     margin-left:auto;
     margin-right:auto;
 }
@@ -60,6 +57,7 @@ header{
 }
 .header-menu{
     display:inline-block;
+    margin-left:40px;
     padding:0;
     list-style:none;    
     vertical-align:top;
@@ -81,7 +79,7 @@ main{
     display:inline-block;
     position:relative;
     margin-right:10px;
-    width:700px;
+    width:570px;
     vertical-align:top;
 }
 article{
@@ -90,7 +88,7 @@ article{
 }
 aside{
     display:inline-block;
-    width:210px;
+    width:200px;
     vertical-align:top;
 }
 nav{    
