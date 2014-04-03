@@ -1,68 +1,87 @@
+/*purple #f627b5 */
+
 @font-face {
-    font-family: 'american_idiotregular';
-    src: url('../fonts/american_idiot-webfont.eot');
-    src: url('../fonts/american_idiot-webfont.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/american_idiot-webfont.woff') format('woff'),
-         url('../fonts/american_idiot-webfont.ttf') format('truetype');
+    font-family: 'hatten';
+    src: url('../fonts/HATTEN_0.eot');
+    src: url('../fonts/HATTEN_0.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/HATTEN_0.woff') format('woff'),
+         url('../fonts/HATTEN_0.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
 .center{
     text-align:center;
-    display:inline-block;
 }
 body{
     background-color:transparent;
-    color:white;
+    color:black;
     font-family:sans-serif;
     margin:0;
 }
 a{
-    color:white;
+    color:black;
 }
 a:hover{
-    color:#eb0012;
+    color:#f627b5;
 }
 header{
     margin:0 0 10px 0;
-    min-height:80px;
+    min-height:50px;
     background-color:black;
     width:100%;
     z-index:100;
+    border-radius:0 0 1em 0.7em;
+    box-shadow:0 0.1em 1em black;
     overflow:hidden;
 }
 header:after{
     clear:both;
 }
 #logo{
+    float:left;
     text-decoration:none;
+    color:#f627b5;
+    padding:0.7em 0 0 0.3em;
+    height:100%;
+}
+#logo>i{
     display:inline-block;
-    color:white;
-    background:url('../images/logo.png') no-repeat;
-    width:170px;
-    height:80px;
-    vertical-align:top;
-    font-family:'american_idiotregular',sans-serif;
-    font-size:2.5em;
-    line-height:0.8em;
-    padding:5px 0 0 60px; 
+    font-family:'hatten',sans-serif;
+    font-size:3em;
+    font-style:italic;
+    -webkit-transform:rotate(-3deg) skewX(10deg);
+    -moz-transform:rotate(-3deg) skewX(10deg);
+    -ms-transform:rotate(-3deg) skewX(10deg);
+    -o-transform:rotate(-3deg) skewX(10deg);
+    transform:rotate(-3deg) skewX(10deg);
+    text-shadow:black 0.05em 0.1em 0,
+                white -0.01em -0.01em 1em,
+                white 0.06em 0.11em 1em;
+    line-height:0.7;
+}
+#logo>span{
+    font-family:serif;
+    font-size:1em;
+    font-style:italic;
+    padding-left:1em;
 }
 .wrapper{
-    display:block;
     position:relative;
-    width:790px;
-    margin-left:auto;
-    margin-right:auto;
+    margin-left:5em;
+    margin-right:5em;
 }
 .header-menu{
-    display:inline-block;
-    margin-left:40px;
+    display:block;
+    text-align:center;
+    height:100%;
+    margin:0 auto;
     padding:0;
-    list-style:none;    
-    vertical-align:top;
+    list-style:none;  
+    color:white;
 }
 .header-menu>li{
     display:inline-block;
+    height:100%;
 }
 .header-menu a{
     font-size:2em;
@@ -88,15 +107,14 @@ header:after{
    background-size:100%;
 }
 .login-call:hover{
-    background-color:#eb0012;
+    background-color:#f627b5;
     border:0;
 }
 main{
+    width:100%;
+    margin-right:-100%;
     float:left;
-    position:relative;
-    padding-right:10px;
-    width:580px;
-    vertical-align:top;
+    overflow:hidden;
 }
 article{
     margin-bottom:10px;
@@ -105,19 +123,31 @@ article{
 aside{
     float:right;
     width:200px;
-    vertical-align:top;
+    margin-right:-210px;
+    position:relative;
 }
 .right-nav{    
     margin-bottom:10px;
     padding:10px;
 }
+.clearfix{
+    position:relative;
+    border-right:210px transparent solid;
+}
+.clearfix::after{
+    display: table;
+	clear: both;
+	content: '';
+}
 
 h1{
-    color:white;
+    color:black;
     margin:5px 0;
 }
 .article-name{
+    font-family:'hatten';
     font-size:2em;
+    letter-spacing:0.1em;
     text-align:left;
     color:white;
     font-weight:bold;
@@ -125,11 +155,13 @@ h1{
     margin-bottom:-5px;
 }
 footer{
-    border-top:1px solid white;
+    box-shadow:0 0.1em 1em black;
+    background-color:black;
     height:20px;
     margin-top:10px;
     clear:both;   
-    padding-top:3px;
+    padding:1em 0;
+    color:white;
 }
 .view-block{
     background-color:#505050;
