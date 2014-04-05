@@ -99,11 +99,11 @@ header:after{
 .header-menu>li{
     display:inline-block;
     height:100%;
-    padding:1em 1em 1em 1em;
     margin:0;
 }
 .header-menu a{
     display:block;
+    padding:0.5em 0.5em 0.5em 0.5em;
     font-size:2em;
     text-decoration:none;
     height:100%;
@@ -120,7 +120,9 @@ header:after{
 }
 .current:hover{
     border-bottom:solid 0.4em #f627b5;
-    padding-bottom:0.6em;
+}
+.current:hover>a{
+    padding-bottom:0.3em;
 }
 .login-call{
    float:right;
