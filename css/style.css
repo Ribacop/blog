@@ -6,7 +6,7 @@
 .sprite.edit-purple { background-position: -74px 0px; width: 64px; height: 64px;  } 
 .sprite.login { background-position: -148px 0px; width: 128px; height: 70px;  } 
 .sprite.login_print { background-position: -286px 0px; width: 64px; height: 35px;  } 
-*/
+
 @font-face {
     font-family: 'hatten';
     src: url('../fonts/HATTEN_0.eot');
@@ -15,60 +15,6 @@
          url('../fonts/HATTEN_0.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
-}
-.sprite{
-    background:url('../images/sprite.png') no-repeat top left;
-}
-.center{
-    text-align:center;
-}
-html,body{
-    height:100%;
-    margin:0;
-}
-.container{
-    min-height:100%;
-    position:relative;
-    padding-bottom:0;
-    -webkit-box-sizing:border-box;
-    -moz-box-sizing:border-box;
-    box-sizing:border-box;
-}
-body{
-    background-color:#f6f5f3;
-    color:black;
-    font-family:sans-serif;
-}
-.substrate-footer{
-    height:3em;
-}
-footer{
-    color:white;
-    background-color:black;
-    box-shadow:0 0.1em 1em black;
-    padding:1em 5%;
-    width:90%;
-    height:1em;
-    margin:-3em auto 0;
-}
-header{
-    min-height:4.375em;
-    background: rgb(0, 0, 0);
-    background: -moz-linear-gradient(268deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
-    background: -webkit-linear-gradient(268deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
-    background: -o-linear-gradient(268deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
-    background: -ms-linear-gradient(268deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
-    background: linear-gradient(358deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
-    z-index:1;
-    width:100%;
-    border-radius:0 0 1em 0.7em;
-    box-shadow:0 0.1em 1em black;
-    overflow:hidden;
-    position:fixed;
-    top:0;
-}
-header:after{
-    clear:both;
 }
 #logo{
     float:left;
@@ -92,10 +38,86 @@ header:after{
                 white 0.06em 0.11em 1em;
     line-height:0.7;
 }
-#logo>span{
+
+*/
+.sprite{
+    background:url('../images/sprite.png') no-repeat top left;
+}
+.center{
+    text-align:center;
+}
+html,body{
+    height:100%;
+    margin:0;
+}
+.container{
+    min-height:100%;
+    
+    padding-bottom:0;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+}
+body{
+    background-color:#f6f5f3;
+    color:black;
+    font-family:sans-serif;
+}
+.substrate-footer{
+    height:3em;
+    z-index:-100;
+}
+footer{
+    color:white;
+    background-color:black;
+    box-shadow:0 0.1em 1em black;
+    padding:1em 5%;
+    width:90%;
+    height:1em;
+    margin:-3em auto 0;
+    z-index:5;
+}
+#header-wrapper{
+    min-height:4.375em;
+    width:100%;
+    position:fixed;
+    z-index:1;
+}
+header{
+    min-height:4.375em;
+    background: rgb(0, 0, 0);
+    background: -moz-linear-gradient(268deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
+    background: -webkit-linear-gradient(268deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
+    background: -o-linear-gradient(268deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
+    background: -ms-linear-gradient(268deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
+    background: linear-gradient(358deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
+    
+    width:100%;
+    border-radius:0 0 1em 0.7em;
+    box-shadow:0 0.1em 1em black;
+    top:0;
+}
+header:after{
+    clear:both;
+}
+#logo{
+    float:left;
+    z-index:2;
+    text-decoration:none;
+    color:#f627b5;
+    padding:0;
+    height:4.375em;
+    min-width:12em;
+    background: black url('../images/logo.png') no-repeat -0.3em -1em;
+    background-size:120%;
     font-family:serif;
     font-size:1em;
     font-style:italic;
+    vertical-align:bottom;
+}
+#logo>span{
+    display:inline-block;
+    padding-top:3em;
     padding-left:1em;
 }
 .header-menu .hidden-login{
@@ -153,12 +175,27 @@ header:after{
     background-color:#f627b5;
     
 }
+.login-call:hover+.login-window-side,
+.login-window-side:hover{
+    visibility:visible;
+    transition-delay:.3s;
+}
+.login-window-side{
+    visibility:hidden;
+    transition-delay: .5s;
+    position:absolute;
+    right:0;
+    top:3.8em;
+    border-radius:0 0 1em 1em;
+    box-shadow:0 0 0.5em black;
+    background-color:black;
+}
 /*Формы ввода*/
 #login{
     border-radius: 10px;
     width:200px;
-    margin:50px auto;
-    padding:15px 20px;
+    margin:1em auto;
+    padding:0 1.5em;
 }
 label{
     display:block;
@@ -300,7 +337,15 @@ a.article-name:hover{
     z-index:10;
     background-color:rgba(0,0,0,1);
 }
-
+.more{
+    display:block;
+    width:50%;
+    margin:0.5em auto;
+    padding:0.5em;
+    background-color:black;
+    color:white;
+    text-align:center;
+}
 /*Кнопки добавления/изменения статей*/
 .add{
     color:white;
@@ -365,6 +410,7 @@ a.article-name:hover{
 .page{
     margin-top:1em;
     margin-bottom:0.5em;
+    position:relative;
 }
 /*Регистрация*/
 #register>input{
