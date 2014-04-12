@@ -1,30 +1,17 @@
-#!/usr/bin/python
-# -*- coding: utf-8 -*-
-import os
-import platform
-import urllib
-from lxml import html
+#!/usr/bin/env python
 
-print "Content-Type: text/html"
+print "Content-Type: text/plain; charset=utf-8"
 print
-print """<!DOCTYPE HTML>
-<html>
-    <head>
-        <title>Корпоративный блог</title>
-        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <meta name="description" content="Учебный корпоративный блог">
-        <meta name="keywords" content="блог, ИТМО, технологии программирования">
-        <link rel="stylesheet" href="css/style.css">
-        <script src="//ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
-        <script src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js"></script>
-        <script type="text/coffeescript" src="scripts/userscript.coffee"></script>
-    </head>
-    <body>
-        <p>"""
-url = "http://vesna.yandex.ru/pushkin/?write=onegin"
+import urllib
+from lxml.html import tostring, html5parser
+
+url = "http://vesna.yandex.ru/law.xml"
+
 s = urllib.urlopen(url).read()
-page = html.fromstring(s)
-p = page.cssselect("p")
-print p[0].text_content()
-print """2352356"""
-print "</p></body></html>"
+fstr = s[s.find("<p>"):s.find("</p>")+4:1]
+print fstr
+#page = html5parser.document_fromstring(s)
+
+#p = page.XPath("//p")
+
+#print p[0].text_content()
