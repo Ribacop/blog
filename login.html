@@ -2,73 +2,79 @@
 <html>
     <head>
         <title>Корпоративный блог</title>
-        <link rel="stylesheet" href="css/style.css">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
         <meta name="description" content="Учебный корпоративный блог">
         <meta name="keywords" content="блог, ИТМО, технологии программирования">
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.0/jquery.min.js"></script>
+        <!--<script src="http://jashkenas.github.com/coffee-script/extras/coffee-script.js"></script>
+        <script type="text/coffeescript" src="scripts/userscript.coffee"></script>
+		-->
+		<script src="scripts/userscript.js"></script>
     </head>
     <body>
-	    <header>
-	        <a class="login-call" href="#"></a>
-            <a id="logo" href="index.html">
-                <i>LAZY BONES</i><br />
-                <span>блог с другим дизайном</span>
-            </a>
-            <ul class="header-menu">
-                <li><a href="index.html">Новости</a></li>
-                <li><a href="page.html">О нас</a></li>
-                <li><a href="page.html">Контакты</a></li>
-            </ul>
-	    </header>
-	    <div class="wrapper">
-	    <main>
-		    <article class="view-block">
-		    	<a class="article-name" href="#">Заголовок статьи 1</a>
-		    	<p>
-
-		    	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in est nec neque euismod accumsan vitae et magna. Curabitur consectetur mollis nisi in tempor. Praesent lobortis fermentum risus, ut tempus quam auctor in. Cras pellentesque, elit sit amet porttitor feugiat, quam nisl lobortis sem, nec molestie urna odio vel ipsum. Vivamus velit magna, mattis id magna eu, blandit ullamcorper nisl. Vestibulum bibendum, lectus in adipiscing semper, ante velit cursus elit, egestas sagittis dolor libero mollis metus. Proin at dictum mi. Ut nec porttitor nulla. In nec tortor id dui malesuada malesuada nec at erat.
-
-Praesent pharetra quam vitae elit ultricies, vitae congue erat aliquet. Morbi rutrum pellentesque urna vel euismod. Aenean et imperdiet dolor, at ultrices neque. Nullam sed tincidunt metus. Aenean sed ante ut diam venenatis elementum nec ornare est. Integer vel turpis eu diam ultricies auctor. Suspendisse sollicitudin consequat lacus a auctor. Nullam diam mauris, tristique vitae leo et, posuere ullamcorper tellus. Suspendisse libero massa, blandit vitae dictum mollis, consectetur vitae massa. Aenean convallis interdum justo, nec adipiscing quam blandit ut. Duis ultrices justo sit amet quam sodales, ac mattis risus adipiscing.
-
-Nulla facilisi. Integer quis accumsan tortor. Morbi quis mattis lectus, et malesuada dolor. Cras consequat lobortis turpis eu commodo. Nunc tristique elit sed mauris bibendum accumsan. Phasellus accumsan eu felis placerat posuere. Nullam nec euismod metus. Praesent a pharetra arcu. Quisque pulvinar posuere risus, feugiat molestie metus posuere quis. Pellentesque mattis convallis ante a dapibus. Ut dignissim blandit neque, ut tincidunt orci varius sit amet. Suspendisse et enim luctus elit pretium interdum. In porttitor est eu vulputate interdum. Proin vestibulum elit nibh, ac mattis mi cursus eu. Donec facilisis sodales elit vel iaculis.
-
-		    	</p>
-		    	<p class="time-label">
-		    	    Опубликовано 7.03.2014
-		    	</p>
-	    	</article>
-            <article class="view-block">
-			   <a class="article-name" href="#">Заголовок статьи 2</a>
-			    <p>
-
-			        Ut velit nisi, feugiat sit amet ullamcorper iaculis, sagittis iaculis felis. Ut aliquet leo non porta accumsan. Ut in dui pellentesque, varius neque eu, porttitor quam. Cras sed lobortis justo. Praesent elementum diam sed gravida semper. Pellentesque porttitor dui ac tellus volutpat ultrices. Nulla facilisi. Nullam enim est, tincidunt eget lorem in, bibendum mollis nisi. Morbi in est purus. Maecenas lectus lectus, lobortis ac sollicitudin vitae, egestas consectetur risus.
-
-Donec ornare enim eget arcu sodales blandit vitae nec lectus. Sed vulputate ipsum odio, id elementum dui blandit in. Aenean facilisis diam sed semper iaculis. In venenatis tellus leo. Integer imperdiet velit ac bibendum rhoncus. Nulla id sodales diam. Proin sit amet mauris at nulla accumsan condimentum.
-
-			    </p>
-			    <p class="time-label">
-		    	    Опубликовано 7.03.2014
-		    	</p>
-	    	</article>
-	    </main>
-        <aside>
-        	<nav id="tags" class="view-block right-nav">
-	        	<h1>Календарь</h1>
-	        	<a href="#">Январь</a>
-	    	    <a href="#">Февраль</a>
-	        </nav>
-	        <nav id="recent" class="view-block right-nav">
-		        <h1>Популярные записи</h1>
-                <a href="#">Заголовок статьи 1</a>
-                <br/>
-                <a href="#">Заголовок статьи 2</a>
-	        </nav>
-        </aside>
+        <div class="container">
+    	    <header>
+    	        <a class="login-call" href="#"></a>
+                <a id="logo" href="index.html">
+                    <i>LAZY BONES</i><br />
+                    <span>блог с другим дизайном</span>
+                </a>
+                <ul class="header-menu">
+                    <li><a href="index.html">Новости</a></li>
+                    <li><a href="page.html">О нас</a></li>
+                    <li><a href="page.html">Контакты</a></li>
+                </ul>
+    	    </header>
+    	    <div class="wrapper cont-navi clearfix">
+        	    <main class="blog-main">
+        		    <article class="view-block">
+        		    	<a class="article-name" href="#">Заголовок статьи 1</a>
+        		    	<p>
+        
+        		    	    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum in est nec neque euismod accumsan vitae et magna. Curabitur consectetur mollis nisi in tempor. Praesent lobortis fermentum risus, ut tempus quam auctor in. Cras pellentesque, elit sit amet porttitor feugiat, quam nisl lobortis sem, nec molestie urna odio vel ipsum. Vivamus velit magna, mattis id magna eu, blandit ullamcorper nisl. Vestibulum bibendum, lectus in adipiscing semper, ante velit cursus elit, egestas sagittis dolor libero mollis metus. Proin at dictum mi. Ut nec porttitor nulla. In nec tortor id dui malesuada malesuada nec at erat.
+        
+        Praesent pharetra quam vitae elit ultricies, vitae congue erat aliquet. Morbi rutrum pellentesque urna vel euismod. Aenean et imperdiet dolor, at ultrices neque. Nullam sed tincidunt metus. Aenean sed ante ut diam venenatis elementum nec ornare est. Integer vel turpis eu diam ultricies auctor. Suspendisse sollicitudin consequat lacus a auctor. Nullam diam mauris, tristique vitae leo et, posuere ullamcorper tellus. Suspendisse libero massa, blandit vitae dictum mollis, consectetur vitae massa. Aenean convallis interdum justo, nec adipiscing quam blandit ut. Duis ultrices justo sit amet quam sodales, ac mattis risus adipiscing.
+        
+        Nulla facilisi. Integer quis accumsan tortor. Morbi quis mattis lectus, et malesuada dolor. Cras consequat lobortis turpis eu commodo. Nunc tristique elit sed mauris bibendum accumsan. Phasellus accumsan eu felis placerat posuere. Nullam nec euismod metus. Praesent a pharetra arcu. Quisque pulvinar posuere risus, feugiat molestie metus posuere quis. Pellentesque mattis convallis ante a dapibus. Ut dignissim blandit neque, ut tincidunt orci varius sit amet. Suspendisse et enim luctus elit pretium interdum. In porttitor est eu vulputate interdum. Proin vestibulum elit nibh, ac mattis mi cursus eu. Donec facilisis sodales elit vel iaculis.
+        
+        		    	</p>
+        		    	<p class="time-label">
+        		    	    Опубликовано 7.03.2014
+        		    	</p>
+        	    	</article>
+                    <article class="view-block">
+        			   <a class="article-name" href="#">Заголовок статьи 2</a>
+        			    <p>
+        
+        			        Ut velit nisi, feugiat sit amet ullamcorper iaculis, sagittis iaculis felis. Ut aliquet leo non porta accumsan. Ut in dui pellentesque, varius neque eu, porttitor quam. Cras sed lobortis justo. Praesent elementum diam sed gravida semper. Pellentesque porttitor dui ac tellus volutpat ultrices. Nulla facilisi. Nullam enim est, tincidunt eget lorem in, bibendum mollis nisi. Morbi in est purus. Maecenas lectus lectus, lobortis ac sollicitudin vitae, egestas consectetur risus.
+        
+        Donec ornare enim eget arcu sodales blandit vitae nec lectus. Sed vulputate ipsum odio, id elementum dui blandit in. Aenean facilisis diam sed semper iaculis. In venenatis tellus leo. Integer imperdiet velit ac bibendum rhoncus. Nulla id sodales diam. Proin sit amet mauris at nulla accumsan condimentum.
+        
+        			    </p>
+        			    <p class="time-label">
+        		    	    Опубликовано 7.03.2014
+        		    	</p>
+        	    	</article>
+        	    </main>
+                <aside>
+                	<nav id="tags" class="view-block right-nav">
+        	        	<h1>Календарь</h1>
+        	        	<a href="#">Январь</a>
+        	    	    <a href="#">Февраль</a>
+        	        </nav>
+        	        <nav id="recent" class="view-block right-nav">
+        		        <h1>Популярные записи</h1>
+                        <a href="#">Заголовок статьи 1</a>
+                        <br/>
+                        <a href="#">Заголовок статьи 2</a>
+        	        </nav>
+                </aside>
+            </div>
+            <div class="substrate-footer"></div>
         </div>
         <footer>
-            <div class="wrapper">
             2014 год
-            </div>
         </footer>
         <div class="shadow">
             <div class="view-block login-window" >
