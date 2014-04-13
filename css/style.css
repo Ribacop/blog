@@ -6,13 +6,33 @@
 .sprite.edit-purple { background-position: -74px 0px; width: 64px; height: 64px;  } 
 .sprite.login { background-position: -148px 0px; width: 128px; height: 70px;  } 
 .sprite.login_print { background-position: -286px 0px; width: 64px; height: 35px;  } 
-
+#logo{
+    float:left;
+    z-index:2;
+    text-decoration:none;
+    color:#f627b5;
+    padding:0;
+    height:4.375em;
+    min-width:12em;
+    background: black url('../images/logo.png') no-repeat -0.3em -1em;
+    background-size:120%;
+    font-family:serif;
+    font-size:1em;
+    font-style:italic;
+    vertical-align:bottom;
+}
+#logo>span{
+    display:inline-block;
+    padding-top:3em;
+    padding-left:1em;
+}
+*/
 @font-face {
     font-family: 'hatten';
-    src: url('../fonts/HATTEN_0.eot');
-    src: url('../fonts/HATTEN_0.eot?#iefix') format('embedded-opentype'),
-         url('../fonts/HATTEN_0.woff') format('woff'),
-         url('../fonts/HATTEN_0.ttf') format('truetype');
+    src: url('../fonts/Haettenschweiler2.eot');
+    src: url('../fonts/Haettenschweiler2.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/Haettenschweiler2.woff') format('woff'),
+         url('../fonts/Haettenschweiler2.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -22,6 +42,7 @@
     color:#f627b5;
     padding:0.7em 0 0 0.3em;
     height:100%;
+    margin-right:0.3em;
 }
 #logo>i{
     display:inline-block;
@@ -38,8 +59,12 @@
                 white 0.06em 0.11em 1em;
     line-height:0.7;
 }
-
-*/
+#logo>span{
+    font-family:serif;
+    font-size:1em;
+    font-style:italic;
+    padding-left:1em;
+}
 .sprite{
     background:url('../images/sprite.png') no-repeat top left;
 }
@@ -100,26 +125,7 @@ header{
 header:after{
     clear:both;
 }
-#logo{
-    float:left;
-    z-index:2;
-    text-decoration:none;
-    color:#f627b5;
-    padding:0;
-    height:4.375em;
-    min-width:12em;
-    background: black url('../images/logo.png') no-repeat -0.3em -1em;
-    background-size:120%;
-    font-family:serif;
-    font-size:1em;
-    font-style:italic;
-    vertical-align:bottom;
-}
-#logo>span{
-    display:inline-block;
-    padding-top:3em;
-    padding-left:1em;
-}
+
 .header-menu .hidden-login{
     display:none;
 }

@@ -1,7 +1,6 @@
 #!/usr/bin/env python
 
-print "Content-Type: application/json; charset=utf-8"
-print
+print "Content-Type: application/json; charset=utf-8\n"
 import urllib
 
 #url = "http://vesna.yandex.ru/law.xml"

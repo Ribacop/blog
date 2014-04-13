@@ -3,7 +3,7 @@ page.ready ->
     doge_animate = (e)->
         doge = $ '#doge'
         if doge.length is 0
-            $('body').append '<img src="https://ps.vk.me/c538108/u85635407/docs/edd3b7ddabbe/Doge.png" style="position:fixed; right:5%; bottom:-200px; width:200px;" id="doge">'
+            $('body').append '<img src="images/Doge.png" style="position:fixed; right:5%; bottom:-200px; width:200px;" id="doge">'
             doge = $ '#doge'
             doge.animate {bottom:0}, 500
             doge.on 'click',(e)->
