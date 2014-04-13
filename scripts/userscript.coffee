@@ -24,14 +24,14 @@ page.ready ->
         
     more = $ ".more"
     more.click (e)->
-        $.get "proxy.py", (data)-> 
-            today = new Date()
-            today = "#{today.getDate()}.#{today.getMonth()}.#{today.getFullYear()}"
-            ins = '<article class="view-block">\n
-        			   <a class="article-name" href="#">'+data["name"]+'</a>\n'+data["content"]+
-        			   ' <p class="time-label">
-        		    	    Опубликовано '+today+
-        		    	'</p>
-        	    	</article>'
-            more.before ins
-    
+        $.get "proxy.py", (data)->
+            if data
+                today = new Date()
+                today = "#{today.getDate()}.#{today.getMonth()}.#{today.getFullYear()}"
+                ins = '<article class="view-block">\n
+            			   <a class="article-name" href="#">'+data["name"]+'</a>\n'+data["content"]+
+            			   ' <p class="time-label">Опубликовано '+today+'</p>
+            	    	</article>'
+                more.before ins
+            else 
+                alert "Генератор статей не работает"
