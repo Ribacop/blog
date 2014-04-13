@@ -43,7 +43,7 @@ page.ready(function() {
     return $.get("proxy.py", function(data) {
       var ins, today;
       if (!data || data[0] === '#') {
-        return alert(encodeURIComponent("Генератор статей не работает"));
+        return alert("Генератор статей не работает");
       } else {
         today = new Date();
         today = "" + (today.getDate()) + "." + (today.getMonth()) + "." + (today.getFullYear());
