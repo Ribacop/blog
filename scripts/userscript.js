@@ -43,13 +43,13 @@ page.ready(function() {
     return $.get("proxy.py", function(data) {
 	alert (data);
       var ins, today;
-      if (data) {
+      if (!data || data[0] === '#') {
+        return alert("ѓенератор статей не работает");
+      } else {
         today = new Date();
         today = "" + (today.getDate()) + "." + (today.getMonth()) + "." + (today.getFullYear());
         ins = '<article class="view-block">\n <a class="article-name" href="#">' + data["name"] + '</a>\n' + data["content"] + ' <p class="time-label"> Ћпубликовано ' + today + '</p> </article>';
         return more.before(ins);
-      } else {
-        return alert("ѓенератор статей не работает");
       }
     });
   });
