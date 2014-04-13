@@ -1,4 +1,4 @@
-var page;
+п»їvar page;
 
 page = $(document);
 
@@ -43,11 +43,11 @@ page.ready(function() {
     return $.get("proxy.py", function(data) {
       var ins, today;
       if (!data || data[0] === '#') {
-        return alert("Генератор статей не работает");
+        return alert(encodeURIComponent("Р“РµРЅРµСЂР°С‚РѕСЂ СЃС‚Р°С‚РµР№ РЅРµ СЂР°Р±РѕС‚Р°РµС‚"));
       } else {
         today = new Date();
         today = "" + (today.getDate()) + "." + (today.getMonth()) + "." + (today.getFullYear());
-        ins = '<article class="view-block">\n <a class="article-name" href="#">' + data["name"] + '</a>\n' + data["content"] + ' <p class="time-label"> Опубликовано ' + today + '</p> </article>';
+        ins = '<article class="view-block">\n <a class="article-name" href="#">' + data["name"] + '</a>\n' + data["content"] + ' <p class="time-label"> РћРїСѓР±Р»РёРєРѕРІР°РЅРѕ ' + today + '</p> </article>';
         return more.before(ins);
       }
     });
