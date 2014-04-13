@@ -41,6 +41,7 @@ page.ready(function() {
   more = $(".more");
   return more.click(function(e) {
     return $.get("proxy.py", function(data) {
+	alert (data);
       var ins, today;
       if (data) {
         today = new Date();
