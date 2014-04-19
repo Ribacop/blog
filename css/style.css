@@ -2,10 +2,11 @@
   grey #f6f5f3 
 
 .sprite { background: url('sprite.png') no-repeat top left;  } 
-.sprite.edit-black { background-position: 0px 0px; width: 64px; height: 64px;  } 
-.sprite.edit-purple { background-position: -74px 0px; width: 64px; height: 64px;  } 
-.sprite.login { background-position: -148px 0px; width: 128px; height: 70px;  } 
-.sprite.login_print { background-position: -286px 0px; width: 64px; height: 35px;  } 
+.sprite.edit-black { background-position: 0px 0px; width: 40px; height: 40px;  } 
+.sprite.edit-purple { background-position: -45px 0px; width: 40px; height: 40px;  } 
+.sprite.login_ { background-position: -90px 0px; width: 64px; height: 35px;  } 
+.sprite.login_hover { background-position: -159px 0px; width: 64px; height: 35px;  } 
+.sprite.login_print { background-position: -228px 0px; width: 64px; height: 35px;  } 
 #logo{
     float:left;
     z-index:2;
@@ -173,13 +174,10 @@ header:after{
    width:64px;
    height:35px;
    background:url('../images/sprite.png') no-repeat;
-   background-position: -74px 0px;
-   background-size:auto 35px;
-   background-color:#f6f5f3;
+   background-position: -90px 0px; 
 }
 .login-call:hover{
-    background-color:#f627b5;
-    
+    background-position: -159px 0;     
 }
 .login-call:hover+.login-window-side,
 .login-window-side:hover{
@@ -379,12 +377,12 @@ a.article-name:hover{
     float:right;
     top:10px;
     background-position: 0px 0px;
-    background-size: auto 20px;
+    background-size: auto 18px;
     right:10px;
 }
 .edit:hover{
     background-position: -23px 0px;
-    background-size: auto 22px;
+    background-size: auto 20px;
 }
 /*Форма добавления/изменения статьи*/
 .new-post{
@@ -414,7 +412,7 @@ a.article-name:hover{
 }
 /*Страницы*/
 .page{
-    margin-top:1em;
+    margin-top:0;
     margin-bottom:0.5em;
     position:relative;
 }
