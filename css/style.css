@@ -37,6 +37,10 @@
     font-weight: normal;
     font-style: normal;
 }
+html,body{
+    height:100%;
+    margin:0;
+}
 #logo{
     float:left;
     text-decoration:none;
@@ -72,10 +76,7 @@
 .center{
     text-align:center;
 }
-html,body{
-    height:100%;
-    margin:0;
-}
+
 .container{
     min-height:100%;
     
@@ -108,8 +109,14 @@ footer{
     width:100%;
     position:fixed;
     z-index:1;
+    top:0;
+    background:transparent;
+}
+#header-wrapper:hover header{
+    top:0;
 }
 header{
+    position:fixed;
     min-height:4.375em;
     background: rgb(0, 0, 0);
     background: -moz-linear-gradient(268deg, rgb(0, 0, 0) 65%, rgb(91, 91, 91) 95%);
@@ -122,6 +129,7 @@ header{
     border-radius:0 0 1em 0.7em;
     box-shadow:0 0.1em 1em black;
     top:0;
+    transition:top 0.3s;
 }
 header:after{
     clear:both;

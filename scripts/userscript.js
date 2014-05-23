@@ -3,7 +3,29 @@
 page = $(document);
 
 page.ready(function() {
-  var doge_animate, header, more;
+  var doge_animate, header, more, onScrollFunction, topOfPage;
+  header = $("header");
+  topOfPage = function() {
+    var scrolled;
+    scrolled = window.pageYOffset || document.documentElement.scrollTop;
+    return scrolled < 70;
+  };
+  onScrollFunction = function(e) {
+    if (topOfPage()) {
+      return header.css("top", "0");
+    } else {
+      return header.css("top", "-5em");
+    }
+  };
+  onScrollFunction();
+  page.scroll(onScrollFunction);
+  header.parent().hover((function(e) {
+    return header.css("top", "0");
+  }), function(e) {
+    if (!topOfPage()) {
+      return header.css("top", "-5em");
+    }
+  });
   doge_animate = function(e) {
     var doge;
     doge = $('#doge');
@@ -19,37 +41,13 @@ page.ready(function() {
     }
   };
   $("main").delegate('article', 'copy', doge_animate);
-  header = $("header");
-  page.scroll(function(e) {
-    var scrolled;
-    scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrolled > 70) {
-      return header.fadeOut();
-    } else {
-      return header.fadeIn();
-    }
-  });
-  header.parent().hover((function() {
-    return header.fadeIn();
-  }), function() {
-    var scrolled;
-    scrolled = window.pageYOffset || document.documentElement.scrollTop;
-    if (scrolled > 70) {
-      return header.fadeOut();
-    }
-  });
   more = $(".more");
   return more.click(function(e) {
-    return $.get("proxy.py", function(data) {
-      var ins, today;
-      if (!data || data[0] === '#') {
-        return alert("Генератор статей не работает");
-      } else {
-        today = new Date();
-        today = "" + (today.getDate()) + "." + (today.getMonth()) + "." + (today.getFullYear());
-        ins = '<article class="view-block">\n <a class="article-name" href="#">' + data["name"] + '</a>\n' + data["content"] + ' <p class="time-label"> Опубликовано ' + today + '</p> </article>';
-        return more.before(ins);
-      }
-    });
+    if (window.copied != null) {
+      return more.before(window.copied.clone());
+    } else {
+      window.copied = $("article").clone();
+      return more.before(window.copied);
+    }
   });
 });
